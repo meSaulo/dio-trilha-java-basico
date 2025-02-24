@@ -1,25 +1,36 @@
+import java.util.Scanner;
+
 public class Metodos {
 
 
     public static void main(String[] args){
 
-        int n1 = 5;
-        int n2 = 1;
-
-        System.out.println(somar(n1,n2));
+       SmartTv tv = new SmartTv();
 
 
+       System.out.println("ESTADO TV ATUAL");
+       System.out.println("TV LIGADA : " + tv.ligado);
+       System.out.println("CANAL ATUAL : " + tv.canal);
+       System.out.println("VOLUME ATUAL : " + tv.volume);
+
+        System.out.println("NOVO ESTADO");
+
+        tv.ligarTv();
+        System.out.println("TV LIGADA : " + tv.ligado);
+
+        tv.aumentarVolume();
+        System.out.println("VOLUME ATUAL : " + tv.volume);
+
+        tv.aumentarCanal();
+        System.out.println("CANAL ATUAL : " + tv.canal);
+
+        tv.mudarCanal(13);
+        System.out.println("CANAL ATUAL : " + tv.canal);
 
     }
 
 
-    public static int somar(int n1, int n2){
 
-        return n1 + n2;
-
-
-
-    }
 
 
 
